@@ -27,6 +27,71 @@ function typeWriter() {
 }
 window.onload = typeWriter;
 
+
+// ===== Projects =====
+
+// Project Data 
+const projects = {
+  dl: {
+    title: "BrainScan AI",
+    date: "Summer 2025",
+    description:
+      "A deep learning project focused on classifying medical brain images using convolutional neural networks. The model achieved 94% accuracy and emphasizes accessibility through a simple interface.",
+    media: `<img src="images/brainscan-demo.png" alt="BrainScan AI demo">`,
+    links: `
+      <a href="https://github.com/cherryonntopp/Brain-Tumor-Classification" target="_blank">GitHub</a>
+      <a href="#" target="_blank">Live Demo</a>
+    `,
+  },
+
+  research: {
+    title: "Image Classification of Cats Vs. Dogs",
+    date: "Summer 2023",
+    description:
+      "A research project analyzing corporate AI ethics frameworks and their real-world implications. Presented findings through a research poster and written paper.",
+    media: `<img src="images/cat-and-dog.png" alt="Image of Cat and Dog">`,
+    links: `
+      <a href="images/ImageClassificationPoster.pdf" target="_blank">Read Paper</a>
+    `,
+  },
+
+  other: {
+    title: "Interdisciplinary Project",
+    date: "Put date here",
+    description:
+      "A creative project exploring problem-solving beyond traditional software development.",
+    media: `<img src="images/other-project.jpg">`,
+    links: ``,
+  },
+};
+
+// Open the modal function
+function openProject(key) {
+  const project = projects[key];
+
+  document.getElementById("modal-title").textContent = project.title;
+  document.getElementById("modal-date").textContent = project.date;
+  document.getElementById("modal-description").textContent = project.description;
+  document.getElementById("modal-media").innerHTML = project.media;
+  document.getElementById("modal-links").innerHTML = project.links;
+
+  document.getElementById("project-modal").style.display = "block";
+}
+
+// Close the modal function
+function closeProject() {
+  document.getElementById("project-modal").style.display = "none";
+}
+
+// Close when clicking outside
+window.addEventListener("click", function (e) {
+  const modal = document.getElementById("project-modal");
+  if (e.target === modal) {
+    closeProject();
+  }
+});
+
+
 // ===== Contact Form Handling =====
 
 const form = document.getElementById("contact-form");

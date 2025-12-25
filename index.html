@@ -1,7 +1,7 @@
 <!-- =======================
 File Name: index.html
-Programmer(s): Shana Ibatuan 
-Description: 
+Description: Main portfolio webpage showcasing introduction, about section,
+skills, projects with modal popups, and contact form.
 ========================= -->
 <!DOCTYPE html>
 <html lang="en">
@@ -46,7 +46,7 @@ Description:
     <div class="about-text">
       <h2>About Me</h2>
       <p>
-        Hi! I’m Shana, an aspiring software engineer. I am a current computer science student at UC
+        Hi! My name is Shana Ibatuan, and I am an aspiring software engineer. I am a current computer science student at UC
         San Diego. 
       </p>
 
@@ -68,24 +68,22 @@ Description:
           <span>Resume</span>
         </a>
 
-        <a href="https://linkedin.com/in/your-link" target="_blank" class="icon-btn">
+        <a href="https://www.linkedin.com/in/shana-ibatuan/" target="_blank" class="icon-btn">
           <img src="icons/linkedin.png" alt="LinkedIn" />
           <span>LinkedIn</span>
         </a>
 
-        <a href="https://github.com/your-username" target="_blank" class="icon-btn">
+        <a href="https://github.com/cherryonntopp" target="_blank" class="icon-btn">
           <img src="icons/github.png" alt="GitHub" />
           <span>GitHub</span>
         </a>
       </div>
-    </div>
 
-  </div>
-</section>
+      <br>
+      <br>
 
-  <!-- ===== SKILLS SECTION ===== -->
-  <section class="section">
-  <h2>Skills</h2>
+
+      <h2>Skills</h2>
   <div class="skills">
     <span>Java</span>
     <span>Python</span>
@@ -93,26 +91,44 @@ Description:
     <span>HTML/CSS</span>
     <span>React (learning)</span>
   </div>
+    </div>
+
+  </div>
 </section>
 
-  <!-- ===== PROJECTS ===== -->
-  <section id="projects" class="section">
-    <h2>Projects</h2>
-    <p id = "projects"> My projects, which isn't ALL code, but all my work I'm proud of!
-    </p>
-    <div class="projects-grid">
-      <div class="project-card">
-        <h3>Project One</h3>
-        <p>Description of project & Add live demo if possible.</p>
-        <a href="#" target="_blank">View Project</a>
-      </div>
-      <div class="project-card">
-        <h3>Project Two</h3>
-        <p>Description of project & Add live demo if possible</p>
-        <a href="#" target="_blank">View Project</a>
-      </div>
+<!-- ===== PROJECTS ===== -->
+<section id="projects" class="projects-section">
+  <h2>Projects</h2>
+
+  <p class="projects-intro">
+    A selection of projects that reflect my curiosity, creativity, and growth,
+    spanning software development, research, and beyond. Click each card to see
+    more!
+  </p>
+
+  <div class="projects-grid">
+    <!-- Deep Learning Project -->
+    <div class="project-card" onclick="openProject('dl')">
+      <h3>BrainScan AI</h3>
+      <p class = "project-date">Summer 2025</p>
+      <p>Python • HTML/CSS • Neural Networks</p>
     </div>
-  </section>
+
+    <!-- Research Project -->
+    <div class="project-card" onclick="openProject('research')">
+      <h3>Image Classification of Cats Vs. Dogs</h3>
+      <p class = "project-date">Summer 2023</p>
+      <p>Research • Poster Presentation</p>
+    </div>
+
+    <!-- Add more projects as needed -->
+    <div class="project-card" onclick="openProject('other')">
+      <h3>NASA VIPER - Lunar Rover Redesign</h3>
+      <p class = "project-date">Summer 2024</p>
+      <p>Research • Computer Aided Design</p>
+    </div>
+  </div>
+</section>
 
   <!-- ===== CONTACT ===== -->
   <section id="contact" class="section">
@@ -136,5 +152,22 @@ Description:
   </footer>
 
   <script src="script.js"></script>
+
+
+  <!-- ===== PROJECT MODAL ===== -->
+<div id="project-modal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeProject()">×</span>
+
+    <h2 id="modal-title"></h2>
+    <p id="modal-date" class="project-date"></p>
+    <p id="modal-description"></p>
+
+    <div id="modal-media" class="modal-media"></div>
+
+    <div id="modal-links" class="modal-links"></div>
+  </div>
+</div>
+
 </body>
 </html>
