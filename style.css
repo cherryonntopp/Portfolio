@@ -124,9 +124,13 @@ header {
 }
 
 .projects-section {
+  min-height: 100vh; 
   padding: 6rem 2rem;
   background-color: #0f0f0f; /* dark contrast */
   text-align: center;
+
+  margin: 0 auto;
+  max-width: none;
 }
 
 .projects-section h2 {
@@ -380,4 +384,51 @@ footer {
 
 .icon-btn:hover img {
   filter: invert(0);
+}
+
+.contact-section {
+  min-height: 100vh;        /* full page */
+  width: 100%;              /* full width */
+  max-width: none;          /* OVERRIDES .section */
+  margin: 0;                /* OVERRIDES .section */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #050507; /* darker than projects */
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #ff85b3; /* Pink heading */
+}
+
+#contact-form {
+  max-width: 600px;   
+  width: 100%;
+  margin: 3rem auto 2rem;
+  text-align: left;
+}
+
+/* ===== DARK MODE INPUTS ===== */
+/* This makes the actual text boxes look good on dark backgrounds */
+
+textarea {
+  min-height: 200px;   /* bigger message box */
+  resize: vertical;    /* allow user to expand */
+}
+
+.contact-alt {
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+  color: #aaa;
+}
+
+.contact-alt strong {
+  color: #ff85b3; /* Pink accent for the email address */
 }

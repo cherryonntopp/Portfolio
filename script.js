@@ -37,10 +37,10 @@ const projects = {
     date: "Summer 2025",
     description:
       "A deep learning project focused on classifying medical brain images using convolutional neural networks. The model achieved 94% accuracy and emphasizes accessibility through a simple interface.",
-    media: `<img src="images/brainscan-demo.png" alt="BrainScan AI demo">`,
+    media: `<video src="videos/BrainTumorDemo.mp4" controls autoplay muted loop width="100%"></video>`,
     links: `
       <a href="https://github.com/cherryonntopp/Brain-Tumor-Classification" target="_blank">GitHub</a>
-      <a href="#" target="_blank">Live Demo</a>
+      <a href="https://cherryonntopp-brain-tumor-demo.hf.space" target="_blank">Live Demo</a>
     `,
   },
 
@@ -48,7 +48,7 @@ const projects = {
     title: "Image Classification of Cats Vs. Dogs",
     date: "Summer 2023",
     description:
-      "A research project analyzing corporate AI ethics frameworks and their real-world implications. Presented findings through a research poster and written paper.",
+      "This project was done under the STEM Active Learning Program at CSU Dominguez Hills. A research project analyzing corporate AI ethics frameworks and their real-world implications. Presented findings through a research poster.",
     media: `<img src="images/cat-and-dog.png" alt="Image of Cat and Dog">`,
     links: `
       <a href="images/ImageClassificationPoster.pdf" target="_blank">Read Paper</a>
